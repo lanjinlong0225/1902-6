@@ -1,0 +1,84 @@
+@import '@/lib/reset.scss';
+* { touch-action: pan-y }
+html, body, #root, .container {
+  @include rect(100%, 100%);
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    .header {
+      @include rect(100%, 0.88rem);
+      @include background-color(#fff);
+    }
+    .content {
+      @include flex();
+      @include rect(100%, auto);
+      @include background-color(#F9F9F9);
+    }
+  }
+  .footer {
+      @include rect(100%, 1rem);
+      @include background-color(#efefef);
+      ul {
+        @include rect(100%, 100%);
+        @include flexbox();
+        a {
+          &:nth-child(2){
+            i{background-position-x: -1.25rem}
+          }
+          &:nth-child(3){
+            i{background-position-x: -2.48rem;width: .7rem;}
+          }
+          &:nth-child(4){
+            i{background-position-x: -3.77rem}
+          }
+          &:nth-child(5){
+            i{background-position-x: -5.03rem}
+          }
+          @include flex();
+          @include rect(auto, 100%);
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content();
+          @include align-items();
+          @include text-color(#333);
+          i{
+            background: url(assets/footer1.png) no-repeat;
+            background-size: cover;
+            width: .63rem;
+            height: .6rem;
+          }
+          &.active {
+            @include text-color(#2fc77d);
+            &:nth-child(2){
+              i{background-position-x: -1.33rem}
+            }
+            &:nth-child(3){
+              i{background-position-x: -2.59rem;width: .7rem;}
+            }
+            &:nth-child(4){
+              i{background-position-x: -3.9rem;width: .7rem;}
+            }
+            &:nth-child(5){
+              i{background-position-x: -5.27rem}
+            }
+            i{
+              background: url(assets/footer.png) no-repeat;
+              background-size: cover;
+              width: .62rem;
+              height: .6rem;
+            }
+          }
+        }
+        .active{
+          
+          
+        }
+      }
+    }
+  }

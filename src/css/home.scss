@@ -1,0 +1,95 @@
+@import '@/lib/reset.scss';
+.box{
+  .header{
+    @include text-align(center);
+    position: relative;
+    h3{font: 200 .28rem/.88rem "";}
+    i{
+      position: absolute;
+      right: 0;
+      top: .14rem;
+      font-size: .4rem;
+    }
+  }
+  .content{
+    .nav{
+      height: 1.7rem;
+      background: #FFF;
+      margin-top: -.1rem;
+      margin-bottom: .2rem;
+      .nav-box{
+        height: 100%;
+        ul{
+          @include rect(100%, 100%);
+          @include flexbox();
+          line-height: 1.7rem;
+          
+          a{
+            &:nth-child(2){
+              i{background-position-x: -1.96rem}
+            }
+            &:nth-child(3){
+              i{background-position-x: -3.98rem;}
+            }
+            &:nth-child(4){
+              i{background-position-x: -5.9rem}
+            }
+            @include flex();
+            @include rect(auto, 100%);
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content();
+            @include align-items();
+            @include text-color(#666666);
+            i{
+              background: url(/assets/home_nav.png) no-repeat;
+              background-size: cover;
+              width: .58rem;
+              height: .58rem;
+              margin: .2rem 0 .1rem 0;
+            }
+          }
+        }
+        p{line-height: .54rem;}
+      }
+    }
+    .claw{
+      height: 1.22rem;
+      background: #fff;
+      margin-bottom: .28rem;
+      img{
+        float: left;
+        width: .73rem;
+        height: .79rem;
+        margin: .29rem .27rem .14rem .35rem;
+      }
+      .claw-right{
+        float:left;
+        h3{
+          margin-top:.4rem;
+          font-size: .15rem; 
+        }
+        p{color: #999}
+      }
+    }
+    .buy{
+      ul{
+        li{
+          .buy-top{
+            h3{}
+            p{}
+          }
+          .buy-bottom{
+            img{}
+            .buy-bottom-right{
+              p{
+                h4{}
+              }
+              b{}
+            }
+          }
+        }
+      }
+    }
+  }
+}

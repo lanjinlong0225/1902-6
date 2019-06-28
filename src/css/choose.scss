@@ -1,0 +1,73 @@
+@import '@/lib/reset.scss';
+
+.box{
+  .header{
+    .header-nav{
+      @include rect(100%, 100%);
+      ul{
+        @include rect(100%, 100%);
+        @include flexbox();
+        li{
+          @include flex();
+          height: 100%;
+          text-align: center;
+          a{
+            @include display(block);
+            line-height: .8rem;
+            width: 1rem;
+            height: .8rem;
+            color:#666666;
+          }
+          &active{
+            border-bottom: .04rem solid green;
+            font: 0.32rem/2 "";
+            color:#363636;
+          }
+        }
+      }    
+    }
+  }
+  .content{
+    @include rect (100%,auto);
+    background:#F7F7F3;
+    .content-tab{
+      @include rect(100%,.94rem);
+      background:#2FC77D;
+      ul{
+        @include rect(100%,100%);
+        @include flexbox();
+        li{
+          @include flex();
+          text-align: center;
+          line-height:.94rem;
+          color:#FFFFFF;
+          font-size: .32rem;
+        }
+      }
+    }
+    .content-list {
+      background: #fff;
+      margin-top: .16rem;
+      @include rect(100%,auto);
+      ul{
+        
+        li{
+          @include rect(100%,1.54rem);
+          border-bottom: .02rem solid #E5E5E5;
+          div{
+            @include flex();
+          }
+          .content-list-img{
+            @include rect(1rem,1rem)
+          }
+          .content-list-border{
+            .content-list-text{}
+            .content-list-time{}
+          }
+          
+        }
+      }
+
+    }
+  }
+}
